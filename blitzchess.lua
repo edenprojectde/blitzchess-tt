@@ -1,6 +1,7 @@
---[[ Nur die Objecte müssen blanla--]]
+--[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
 
-times = { a = 2, b = 2}
+--[[ The onLoad event is called after the game save finishes loading. --]]
+times = { a = 300, b = 300}
 starttimes = {a=300,b=300}
 currentPlayer = 0
 
@@ -18,7 +19,6 @@ function onLoad()
         tooltip="A Clock",
         rotation = {180, 0, 180},
         font_size = 340,
-        label="WHITE"
     })
     activateObjB = getObjectFromGUID('51cfcf')
     activateObjB.createButton({
@@ -29,7 +29,6 @@ function onLoad()
         tooltip="A Clock",
         font_size = 340,
         font_color = {1, 1, 1},
-        label="BLACK"
     })
     activateObjPause = getObjectFromGUID('ca2fa4')
     activateObjPause.createButton({
