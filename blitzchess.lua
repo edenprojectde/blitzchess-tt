@@ -7,9 +7,11 @@ currentPlayer = 0
 
 function onLoad()
     print(currentPlayer)
+    --[[ Text Elements --]]
     counterObjA = getObjectFromGUID('c980a1')
     counterObjB = getObjectFromGUID('f9ab2f')
 
+    --[[ Button to activate A time. --]]
     activateObjA = getObjectFromGUID('6fbaed')
     activateObjA.createButton({
         click_function="changeToA",
@@ -20,6 +22,7 @@ function onLoad()
         rotation = {180, 0, 180},
         font_size = 340,
     })
+    --[[ Button to activate B time. --]]
     activateObjB = getObjectFromGUID('51cfcf')
     activateObjB.createButton({
         click_function="changeToB",
@@ -30,6 +33,7 @@ function onLoad()
         font_size = 340,
         font_color = {1, 1, 1},
     })
+    --[[ Button to Pause and Reset. --]]
     activateObjPause = getObjectFromGUID('ca2fa4')
     activateObjPause.createButton({
         click_function="changeToPause",
@@ -39,7 +43,7 @@ function onLoad()
         tooltip="Linksklick = Pause, Rechtsklick = Reset",
         function_owner=self
     })
-
+    --[[ Button to change max Playtime. --]]
     activateObjAddMinute = getObjectFromGUID('d8514b')
     activateObjAddMinute.createButton({
         click_function="addMinute",
